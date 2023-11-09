@@ -1,5 +1,8 @@
 import "./Styles/null.css";
 import "./Styles/style.css";
+import floratest_small from "./img/Floratest_small.gif";
+import network_small from "./img/Network_small.gif";
+import communicator_small from "./img/Communicator_small.gif";
 
 function App() {
   return (
@@ -127,7 +130,7 @@ function App() {
               <div className="content__projects-item">
                 <a href="./project01.html">
                   <div className="content__projects-item-img">
-                    <img src="./img/Floratest_small.gif" alt="" />
+                    <img src={floratest_small} alt="" />
                   </div>
                 </a>
                 <a className="content__projects-link" href="./project01.html">
@@ -147,7 +150,7 @@ function App() {
               <div className="content__projects-item">
                 <a href="./project02.html">
                   <div className="content__projects-item-img">
-                    <img src="./img/Network_small.gif" alt="" />
+                    <img src={network_small} alt="" />
                   </div>
                 </a>
                 <a className="content__projects-link" href="./project02.html">
@@ -167,7 +170,7 @@ function App() {
               <div className="content__projects-item">
                 <a href="./project03.html">
                   <div className="content__projects-item-img">
-                    <img src="./img/Communicator_small.gif" alt="" />
+                    <img src={communicator_small} alt="" />
                   </div>
                 </a>
                 <a className="content__projects-link" href="./project03.html">
