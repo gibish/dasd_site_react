@@ -4,7 +4,7 @@ function Footer() {
       <div className="container">
         <div className="footer__inner">
           <div className="footer__copyright">
-            © 2023,
+            © 2023,{" "}
             <span data-lang="footer-department">
               Acquisition System Department of V.M.Glushkov's Institute of Cybernetics of NAS of Ukraine
             </span>

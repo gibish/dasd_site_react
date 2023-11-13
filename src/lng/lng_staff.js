@@ -1,4 +1,4 @@
-const staffText = {
+﻿const staffText = {
   "staff-content-welcome": {
     en: "Department staff",
     ua: "Співробітники відділу",
@@ -84,8 +84,8 @@ const staffText = {
     ua: "Старший науковий співробітник",
   },
   "kos-degree": {
-    en: "Candidate of technical sciences (PhD)",
-    ua: "Кандидат технічних наук",
+    en: "Candidate of geological and mineralogical sciences (PhD)",
+    ua: "Кандидат геолого-мінералогічних наук",
   },
   "bra-name": {
     en: "Yuriy BRAYKO",
@@ -100,8 +100,8 @@ const staffText = {
     ua: "ГРУША Володимир Михайлович",
   },
   "hru-position": {
-    en: "Research fellow",
-    ua: "Науковий співробітник",
+    en: "Senior research fellow",
+    ua: "Старший науковий співробітник",
   },
   "hru-degree": {
     en: "Candidate of technical sciences (PhD)",
