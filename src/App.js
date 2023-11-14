@@ -9,6 +9,8 @@ import Department from "./pages/Department";
 import Institute from "./pages/Institute";
 import Projects from "./pages/Projects";
 import Staff from "./pages/Staff";
+import Publications from "./pages/Publications";
+import Contacts from "./pages/Contacts";
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
       {/* <Department /> */}
       {/* <Institute /> */}
       {/* <Projects /> */}
-      <Staff />
+      {/* <Staff /> */}
+      {/* <Publications /> */}
+      <Contacts />
 
       <Footer />
 
