@@ -1,30 +1,56 @@
+import { NavLink } from "react-router-dom";
+
 function Navbar() {
+  const activeLink = "nav__item active";
+  const normalLink = "nav__item";
+
   return (
     <nav className="nav" id="nav">
       <div className="container">
         <div className="nav__inner">
           <div className="nav__menu nav__menu-hidden" id="nav_menu">
-            <a className="nav__item active" data-lang="nav-main" href="./index.html">
+            <NavLink to="/" className="nav__item" data-lang="nav-main">
               Main
-            </a>
-            <a className="nav__item" data-lang="nav-department" href="./department.html">
+            </NavLink>
+            <NavLink to="/department" className="nav__item" data-lang="nav-department">
               About department
-            </a>
-            <a className="nav__item" data-lang="nav-institute" href="./institute.html">
+            </NavLink>
+            <NavLink to="/institute" className="nav__item" data-lang="nav-institute">
               About institute
-            </a>
-            <a className="nav__item" data-lang="nav-projects" href="./projects.html">
+            </NavLink>
+            <NavLink to="/projects" className="nav__item" data-lang="nav-projects">
               Projects
-            </a>
-            <a className="nav__item" data-lang="nav-staff" href="./staff.html">
+            </NavLink>
+            <NavLink to="/staff" className="nav__item" data-lang="nav-staff">
               Staff
-            </a>
-            <a className="nav__item" data-lang="nav-publications" href="./publications.html">
+            </NavLink>
+            <NavLink to="/publications" className="nav__item" data-lang="nav-publications">
               Publications
-            </a>
-            <a className="nav__item" data-lang="nav-contacts" href="./contacts.html">
+            </NavLink>
+            <NavLink to="/contacts" className="nav__item" data-lang="nav-contacts">
               Contacts
-            </a>
+            </NavLink>
+            {/* <a className="nav__item active" data-lang="nav-main" href="./index.html">
+              Main
+            </a> */}
+            {/* <a className="nav__item" data-lang="nav-department" href="./department.html">
+              About department
+            </a> */}
+            {/* <a className="nav__item" data-lang="nav-institute" href="./institute.html">
+              About institute
+            </a> */}
+            {/* <a className="nav__item" data-lang="nav-projects" href="./projects.html">
+              Projects
+            </a> */}
+            {/* <a className="nav__item" data-lang="nav-staff" href="./staff.html">
+              Staff
+            </a> */}
+            {/* <a className="nav__item" data-lang="nav-publications" href="./publications.html">
+              Publications
+            </a> */}
+            {/* <a className="nav__item" data-lang="nav-contacts" href="./contacts.html">
+              Contacts
+            </a> */}
           </div>
 
           <div className="nav__menu">

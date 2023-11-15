@@ -34,7 +34,7 @@ function Projects() {
               </a>
             </div>
           </div>
-          {/* <!-- Project Floratest--> */}
+          {/* <!-- Project Network --> */}
           <div className="content__descr-img content__descr-img-proj content--dotted-bottom">
             <img className="content__img content__img-proj" src={network_small} alt="Wireless sensor network" />
             <div className="content__descr">

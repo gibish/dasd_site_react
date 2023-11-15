@@ -1,6 +1,8 @@
 import "./Styles/null.css";
 import "./Styles/style.css";
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/navbar/Navbar";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -15,18 +17,22 @@ import Contacts from "./pages/Contacts";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Navbar />
+      <Router>
+        <Header />
+        <Navbar />
 
-      {/* <Home /> */}
-      {/* <Department /> */}
-      {/* <Institute /> */}
-      {/* <Projects /> */}
-      {/* <Staff /> */}
-      {/* <Publications /> */}
-      <Contacts />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/department" element={<Department />} />
+          <Route path="/institute" element={<Institute />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/staff" element={<Staff />} />
+          <Route path="/publications" element={<Publications />} />
+          <Route path="/contacts" element={<Contacts />} />
+        </Routes>
 
-      <Footer />
+        <Footer />
+      </Router>
 
       <script src="./lng/lng_header.js"></script>
       <script src="./lng/lng_main.js"></script>
