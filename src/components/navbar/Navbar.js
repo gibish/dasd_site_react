@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import BtnDarkMode from "../btnDarkMode/BtnDarkMode";
 
 function Navbar() {
   const activeLink = "nav__item active";
@@ -9,25 +10,49 @@ function Navbar() {
       <div className="container">
         <div className="nav__inner">
           <div className="nav__menu nav__menu-hidden" id="nav_menu">
-            <NavLink to="/" className="nav__item" data-lang="nav-main">
+            <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)} data-lang="nav-main">
               Main
             </NavLink>
-            <NavLink to="/department" className="nav__item" data-lang="nav-department">
+            <NavLink
+              to="/department"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+              data-lang="nav-department"
+            >
               About department
             </NavLink>
-            <NavLink to="/institute" className="nav__item" data-lang="nav-institute">
+            <NavLink
+              to="/institute"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+              data-lang="nav-institute"
+            >
               About institute
             </NavLink>
-            <NavLink to="/projects" className="nav__item" data-lang="nav-projects">
+            <NavLink
+              to="/projects"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+              data-lang="nav-projects"
+            >
               Projects
             </NavLink>
-            <NavLink to="/staff" className="nav__item" data-lang="nav-staff">
+            <NavLink
+              to="/staff"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+              data-lang="nav-staff"
+            >
               Staff
             </NavLink>
-            <NavLink to="/publications" className="nav__item" data-lang="nav-publications">
+            <NavLink
+              to="/publications"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+              data-lang="nav-publications"
+            >
               Publications
             </NavLink>
-            <NavLink to="/contacts" className="nav__item" data-lang="nav-contacts">
+            <NavLink
+              to="/contacts"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+              data-lang="nav-contacts"
+            >
               Contacts
             </NavLink>
             {/* <a className="nav__item active" data-lang="nav-main" href="./index.html">
@@ -54,18 +79,7 @@ function Navbar() {
           </div>
 
           <div className="nav__menu">
-            <div className="nav__menu nav__theme">
-              <button className="nav__item nav__item-btn nav--very-light" data-theme_btn="light">
-                <div className="nav__img-theme" id="img_light_theme">
-                  Light
-                </div>
-              </button>
-              <button className="nav__item nav__item-btn nav--very-light" data-theme_btn="dark">
-                <div className="nav__img-theme" id="img_dark_theme">
-                  Dark
-                </div>
-              </button>
-            </div>
+            <BtnDarkMode />
 
             <div className="nav__menu nav__lang">
               {/*
