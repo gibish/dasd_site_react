@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import BtnDarkMode from "../btnDarkMode/BtnDarkMode";
+import BtnLanguage from "../btnLanguage/BtnLanguage";
 
 function Navbar() {
   const activeLink = "nav__item active";
@@ -80,20 +81,7 @@ function Navbar() {
 
           <div className="nav__menu">
             <BtnDarkMode />
-
-            <div className="nav__menu nav__lang">
-              {/*
-                          <a className="nav__item" href="#">UA</a>
-              <a className="nav__item active" href="#">EN</a>
-            */}
-
-              <button className="nav__item nav__item-btn nav--very-light" data-btn="ua">
-                UA
-              </button>
-              <button className="nav__item nav__item-btn nav--very-light" data-btn="en">
-                EN
-              </button>
-            </div>
+            <BtnLanguage />
           </div>
 
           <button className="nav-toggle" id="nav_toggle" type="button">
