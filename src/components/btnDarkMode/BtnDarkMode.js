@@ -67,6 +67,7 @@ function BtnDarkMode() {
   );
 }
 
+//
 // window.onload = () => {
 //   let imgLight = document.getElementById("img_light_theme");
 //   imgLight.innerHTML = lightIcon;
