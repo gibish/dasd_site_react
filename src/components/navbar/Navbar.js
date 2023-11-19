@@ -1,9 +1,9 @@
+import { useContext, useEffect } from "react";
+import { CurrentLanguageContext } from "../../App";
 import { NavLink } from "react-router-dom";
 import BtnDarkMode from "../btnDarkMode/BtnDarkMode";
 import BtnLanguage from "../btnLanguage/BtnLanguage";
 import Text from "../../lng/lng_nav";
-import { useContext, useEffect } from "react";
-import { CurrentLanguageContext } from "../../App";
 
 function Navbar() {
   const activeLink = "nav__item active";

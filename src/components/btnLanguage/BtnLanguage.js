@@ -9,9 +9,9 @@ function BtnLanguage() {
   useEffect(() => {
     if (currentLanguage !== language) {
       setCurrentLanguage(language);
-      console.log("setCL");
+      // console.log("setCL");
     }
-    console.log("setEf");
+    // console.log("setEf");
   }, [language, currentLanguage, setCurrentLanguage]);
 
   const changeLanguage = (e) => {

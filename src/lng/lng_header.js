@@ -1,4 +1,8 @@
-﻿const headerText = {
+﻿// U+FEFF at the beginning
+
+/*eslint unicode-bom: ["error", "always"]*/
+
+const headerText = {
   "header-department": {
     en: "Data acquisition system department",
     ua: "Відділ перетворювачів форми інформації",
@@ -12,6 +16,8 @@
     ua: "Національна академія наук України",
   },
 };
+
+export default headerText;
 
 /*
 "":{
