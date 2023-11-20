@@ -1,4 +1,8 @@
-﻿const projectsText = {
+﻿// U+FEFF at the beginning
+
+/*eslint unicode-bom: ["error", "always"]*/
+
+const projectsText = {
   "proj-content-welcome": {
     en: "Latest projects",
     ua: "Останні проекти",
@@ -40,6 +44,8 @@
     ua: "Детальніше про проект...",
   },
 };
+
+export default projectsText;
 
 /*
   "":{

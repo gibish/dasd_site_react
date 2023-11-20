@@ -1,3 +1,6 @@
+import { useContext, useEffect } from "react";
+import { CurrentLanguageContext } from "../App";
+
 import glushkov from "./../img/inst/Glushkov.jpg";
 import myhalevych from "./../img/inst/Myhalevych.jpg";
 import lebedyev from "./../img/inst/Lebedyev.jpg";
@@ -8,7 +11,20 @@ import scit3 from "./../img/inst/Scit-3.jpg";
 import amosov from "./../img/inst/Amosov.jpg";
 import dorodnicyn from "./../img/inst/Dorodnicyn.jpg";
 
+import Text from "../lng/lng_institute";
+
 function Institute() {
+  const { currentLanguage } = useContext(CurrentLanguageContext);
+
+  useEffect(() => {
+    for (const key in Text) {
+      const elem = document.querySelector(`[data-lang=${key}]`);
+      if (elem) {
+        elem.textContent = Text[key][currentLanguage];
+      }
+    }
+  }, [currentLanguage]);
+
   return (
     <main className="content">
       <div className="container">
@@ -300,21 +316,21 @@ function Institute() {
           </div>
           <div className="content__descr">
             <ul className="content__descr-ul">
-              <li data-lang="dept-content-49-1">
+              <li data-lang="inst-content-49-1">
                 automated system for monitoring of infectious diseases for Ministry of health of Ukraine;
               </li>
-              <li data-lang="dept-content-49-2">
+              <li data-lang="inst-content-49-2">
                 automated system for business planning of innovative projects for State innovation fund of Ukraine;
               </li>
-              <li data-lang="dept-content-49-3">
+              <li data-lang="inst-content-49-3">
                 automated information system for collecting of information on preferences for the State tax
                 administration of Ukraine;
               </li>
-              <li data-lang="dept-content-49-4">
+              <li data-lang="inst-content-49-4">
                 comprehensive automated system for supporting of activity of Social insurance fund on temporary
                 disability of Ukraine and its regional offices;
               </li>
-              <li data-lang="dept-content-49-5">
+              <li data-lang="inst-content-49-5">
                 automated registration and control system of appeals to the Supreme court of Ukraine and others.
               </li>
             </ul>
@@ -340,25 +356,25 @@ function Institute() {
           </div>
           <div className="content__descr">
             <ul className="content__descr-ul">
-              <li data-lang="dept-content-53-1">
+              <li data-lang="inst-content-53-1">
                 development of general theory and methods of system analysis, mathematical modeling, optimization and
                 artificial intelligence;
               </li>
-              <li data-lang="dept-content-53-2">
+              <li data-lang="inst-content-53-2">
                 development of general control theory, methods and tools for building intelligent control systems of
                 various levels and for different application;
               </li>
-              <li data-lang="dept-content-53-3">
+              <li data-lang="inst-content-53-3">
                 creation of general theory of computers and development of advanced computer technology, artificial
                 intelligence and computer science;
               </li>
-              <li data-lang="dept-content-53-4">
+              <li data-lang="inst-content-53-4">
                 development of perspective systems of mathematical software of general and applied purposes;
               </li>
-              <li data-lang="dept-content-53-5">
+              <li data-lang="inst-content-53-5">
                 development of new information technologies and intelligent systems;
               </li>
-              <li data-lang="dept-content-53-6">
+              <li data-lang="inst-content-53-6">
                 solving of fundamental and applied problems of informatization society.
               </li>
             </ul>

@@ -1,4 +1,20 @@
+import { useContext, useEffect } from "react";
+import { CurrentLanguageContext } from "../App";
+
+import Text from "../lng/lng_contacts";
+
 function Contacts() {
+  const { currentLanguage } = useContext(CurrentLanguageContext);
+
+  useEffect(() => {
+    for (const key in Text) {
+      const elem = document.querySelector(`[data-lang=${key}]`);
+      if (elem) {
+        elem.textContent = Text[key][currentLanguage];
+      }
+    }
+  }, [currentLanguage]);
+
   return (
     <main className="content">
       <div className="container">

@@ -1,4 +1,8 @@
-﻿const contactsText = {
+﻿// U+FEFF at the beginning
+
+/*eslint unicode-bom: ["error", "always"]*/
+
+const contactsText = {
   "cont-content-welcome": {
     en: "Contacts",
     ua: "Контакти",
@@ -48,6 +52,8 @@
     ua: "Карта:",
   },
 };
+
+export default contactsText;
 
 /*
   "":{

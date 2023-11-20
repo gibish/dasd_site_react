@@ -1,3 +1,6 @@
+import { useContext, useEffect } from "react";
+import { CurrentLanguageContext } from "../App";
+
 import romanov from "./../img/dept/Romanov.jpg";
 import bagatskyi from "./../img/dept/Bagacjkyy.jpg";
 import galelyuka from "./../img/dept/Galelyuka.jpg";
@@ -21,7 +24,20 @@ import orchid from "./../img/add/orchid_logo.svg";
 import google_scholar from "./../img/add/google_scholar.svg";
 import researchgate from "./../img/add/researchgate_logo.svg";
 
+import Text from "../lng/lng_staff";
+
 function Staff() {
+  const { currentLanguage } = useContext(CurrentLanguageContext);
+
+  useEffect(() => {
+    for (const key in Text) {
+      const elem = document.querySelector(`[data-lang=${key}]`);
+      if (elem) {
+        elem.textContent = Text[key][currentLanguage];
+      }
+    }
+  }, [currentLanguage]);
+
   return (
     <main className="content">
       <div className="container">

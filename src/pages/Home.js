@@ -1,8 +1,24 @@
+import { useContext, useEffect } from "react";
+import { CurrentLanguageContext } from "../App";
+
 import floratest_small from "./../img/Floratest_small.gif";
 import network_small from "./../img/Network_small.gif";
 import communicator_small from "./../img/Communicator_small.gif";
 
+import Text from "../lng/lng_main";
+
 function Home() {
+  const { currentLanguage } = useContext(CurrentLanguageContext);
+
+  useEffect(() => {
+    for (const key in Text) {
+      const elem = document.querySelector(`[data-lang=${key}]`);
+      if (elem) {
+        elem.textContent = Text[key][currentLanguage];
+      }
+    }
+  }, [currentLanguage]);
+
   return (
     <main className="content">
       <div className="container">

@@ -1,4 +1,8 @@
-﻿const departmentText = {
+﻿// U+FEFF at the beginning
+
+/*eslint unicode-bom: ["error", "always"]*/
+
+const departmentText = {
   "dept-content-welcome": {
     en: "About Data Acquisition System Department",
     ua: "Про відділ перетворювачів форми інформації",
@@ -136,6 +140,8 @@
     ua: "В рамках міжнародних договорів про співпрацю, грантових угод та проектів відділ плідно співпрацює з науковими установами та університетами Болгарії, Німеччини, Польщі, Малайзії, Єгипту і США.",
   },
 };
+
+export default departmentText;
 
 /*
   "":{

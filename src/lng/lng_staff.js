@@ -1,4 +1,8 @@
-﻿const staffText = {
+﻿// U+FEFF at the beginning
+
+/*eslint unicode-bom: ["error", "always"]*/
+
+const staffText = {
   "staff-content-welcome": {
     en: "Department staff",
     ua: "Співробітники відділу",
@@ -196,6 +200,8 @@
     ua: "Інженер",
   },
 };
+
+export default staffText;
 
 /*
   "":{

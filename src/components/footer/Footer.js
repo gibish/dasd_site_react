@@ -1,4 +1,20 @@
+import { useContext, useEffect } from "react";
+import { CurrentLanguageContext } from "../../App";
+
+import Text from "../../lng/lng_footer";
+
 function Footer() {
+  const { currentLanguage } = useContext(CurrentLanguageContext);
+
+  useEffect(() => {
+    for (const key in Text) {
+      const elem = document.querySelector(`[data-lang=${key}]`);
+      if (elem) {
+        elem.textContent = Text[key][currentLanguage];
+      }
+    }
+  }, [currentLanguage]);
+
   return (
     <footer className="footer">
       <div className="container">
