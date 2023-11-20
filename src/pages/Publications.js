@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { CurrentLanguageContext } from "../App";
 
 import Text from "../lng/lng_publications";
+import GetPublications from "../utils/getPublications";
 
 function Publications() {
   const { currentLanguage } = useContext(CurrentLanguageContext);
@@ -14,6 +15,10 @@ function Publications() {
       }
     }
   }, [currentLanguage]);
+
+  // useEffect(() => {
+  //   <GetPublication />;
+  // }, []);
 
   return (
     <main className="content">
@@ -33,6 +38,7 @@ function Publications() {
           </div>
         </div>
       </div>
+      <GetPublications />
     </main>
   );
 }
