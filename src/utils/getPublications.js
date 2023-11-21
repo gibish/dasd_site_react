@@ -44,7 +44,7 @@ async function getPublication() {
     .then((lists) =>
       lists.forEach((list) => {
         list.group.forEach((item, i) => {
-          if (!(publications.findIndex((el) => el.title == item["work-summary"][0]["title"]["title"].value) + 1)) {
+          if (!(publications.findIndex((el) => el.title === item["work-summary"][0]["title"]["title"].value) + 1)) {
             publications.push(prepareList(item));
           }
 
