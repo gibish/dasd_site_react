@@ -24,7 +24,6 @@ function Publications() {
     <main className="content">
       <div className="container">
         <div className="content__inner">
-          <GetPublications />
           <div className="content__title" data-lang="publ-content-welcome">
             Selected Publications
           </div>
@@ -34,13 +33,12 @@ function Publications() {
           </div>
           <div className="content__descr">
             <ol className="content__list-publications-ol" id="content__list-publications-ol">
-              <span className="content__loading" id="content__alert">
-                LOADING...
-              </span>
+              <span className="content__loading">LOADING...</span>
             </ol>
           </div>
         </div>
       </div>
+      <GetPublications />
     </main>
   );
 }
