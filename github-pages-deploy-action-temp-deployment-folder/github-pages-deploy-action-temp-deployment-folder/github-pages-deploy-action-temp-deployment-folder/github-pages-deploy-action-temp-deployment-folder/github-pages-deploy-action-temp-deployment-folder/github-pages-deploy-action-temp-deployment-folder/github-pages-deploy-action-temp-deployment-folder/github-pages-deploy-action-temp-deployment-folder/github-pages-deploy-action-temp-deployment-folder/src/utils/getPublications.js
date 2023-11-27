@@ -44,19 +44,16 @@ async function getPublication() {
     .then((lists) =>
       lists.forEach((list) => {
         list.group.forEach((item, i) => {
-          if (!(publications.findIndex((el) => el.title === item["work-summary"][0]["title"]["title"].value) + 1)) {
-            publications.push(prepareList(item));
-          }
-
-          // publications.findIndex((el) => el.title == item["work-summary"][0]["title"]["title"].value) + 1
-          //   ? {}
-          //   : publications.push(prepareList(item));
-          return null;
+          publications.findIndex((el) => {
+            return (el.title === item["work-summary"][0]["title"]["title"].value) + 1
+              ? {}
+              : publications.push(prepareList(item));
+          });
         });
       })
     )
     .then(() => {
-      console.log("Last:", publications);
+      //      console.log("Last:", publications);
       let requestsOne = publications.map((publicationOne) => fetch(`${mainURL}${publicationOne.path}`, opt));
 
       Promise.all(requestsOne)
@@ -70,7 +67,7 @@ async function getPublication() {
         .then((responsesOne) => Promise.all(responsesOne.map((res) => res.json())))
         .then((lists) =>
           lists.forEach((item, i) => {
-            console.log(i, "=", item);
+            console.log(item);
             let authors = "";
             let authorsCount = item["contributors"]["contributor"].length;
             item["contributors"]["contributor"].forEach((contr, j) => {
@@ -87,7 +84,7 @@ async function getPublication() {
                   publications[i].url = res;
                 }
               });
-              console.log("Res:", res);
+              //             console.log(res);
             }
           })
         )
@@ -107,13 +104,8 @@ async function getPublication() {
         })
         .then(() => {
           displayList(publications);
-          console.log("Publications last:", publications);
         })
-        .catch((error) => {
-          console.log("My One error:", error);
-          const publicationsOrderedList = document.getElementById("content__alert");
-          publicationsOrderedList.innerHTML = "ERROR...";
-        });
+        .catch((error) => console.log("My One error:", error));
     })
     .catch((error) => console.log("My error:", error));
 
