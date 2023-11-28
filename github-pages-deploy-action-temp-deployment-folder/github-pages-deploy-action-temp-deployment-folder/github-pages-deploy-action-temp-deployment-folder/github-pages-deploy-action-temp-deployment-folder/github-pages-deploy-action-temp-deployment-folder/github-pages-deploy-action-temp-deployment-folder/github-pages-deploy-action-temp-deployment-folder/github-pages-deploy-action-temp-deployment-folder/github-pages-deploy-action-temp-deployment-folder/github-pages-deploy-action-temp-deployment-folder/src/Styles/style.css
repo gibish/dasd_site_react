@@ -353,10 +353,6 @@ body {
   border-bottom: var(--color-link) dotted 1px;
 }
 
-.projects_list li:last-child {
-  border-bottom: none;
-}
-
 .span-name {
   font-size: 1.2em;
   font-weight: bold;
