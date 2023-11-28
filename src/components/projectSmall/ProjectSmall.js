@@ -1,8 +1,7 @@
 function ProjectSmall({ project }) {
-  console.log("PPP", project);
   return (
-    <div className="content__descr-img content__descr-img-proj content--dotted-bottom">
-      <img className="content__img content__img-proj" src={project.img} alt="Floratest" />
+    <li className="content__descr-img content__descr-img-proj content--dotted-bottom">
+      <img className="content__img content__img-proj" src={project.img} alt={project.name} />
       <div className="content__descr">
         <a className="content__site" href="./project01.html">
           <span className="content__descr-span span-name-a content__descr--head" data-lang="proj-name">
@@ -18,7 +17,7 @@ function ProjectSmall({ project }) {
           </span>
         </a>
       </div>
-    </div>
+    </li>
   );
 }
 
