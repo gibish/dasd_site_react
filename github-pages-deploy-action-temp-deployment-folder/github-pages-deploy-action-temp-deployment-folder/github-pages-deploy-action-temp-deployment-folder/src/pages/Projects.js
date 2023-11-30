@@ -36,9 +36,11 @@ function Projects() {
           <div className="content__title" data-lang="proj-content-welcome">
             Projects
           </div>
-          {currentProjects.map((project) => {
-            return <ProjectSmall project={project} />;
-          })}
+          <ul className="projects_list">
+            {currentProjects.map((project) => {
+              return <ProjectSmall key={project.name} project={project} />;
+            })}
+          </ul>
           <br />
           <br />
         </div>
