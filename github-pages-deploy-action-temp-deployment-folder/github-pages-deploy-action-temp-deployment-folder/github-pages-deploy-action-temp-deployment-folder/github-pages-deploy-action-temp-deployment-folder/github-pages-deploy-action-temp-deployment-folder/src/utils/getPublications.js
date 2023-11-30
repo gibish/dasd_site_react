@@ -56,7 +56,6 @@ async function getPublication() {
       })
     )
     .then(() => {
-      console.log("Last:", publications);
       let requestsOne = publications.map((publicationOne) => fetch(`${mainURL}${publicationOne.path}`, opt));
 
       Promise.all(requestsOne)
@@ -70,7 +69,6 @@ async function getPublication() {
         .then((responsesOne) => Promise.all(responsesOne.map((res) => res.json())))
         .then((lists) =>
           lists.forEach((item, i) => {
-            console.log(i, "=", item);
             let authors = "";
             let authorsCount = item["contributors"]["contributor"].length;
             item["contributors"]["contributor"].forEach((contr, j) => {
@@ -87,7 +85,6 @@ async function getPublication() {
                   publications[i].url = res;
                 }
               });
-              console.log("Res:", res);
             }
           })
         )
@@ -107,7 +104,6 @@ async function getPublication() {
         })
         .then(() => {
           displayList(publications);
-          console.log("Publications last:", publications);
         })
         .catch((error) => {
           console.log("My One error:", error);

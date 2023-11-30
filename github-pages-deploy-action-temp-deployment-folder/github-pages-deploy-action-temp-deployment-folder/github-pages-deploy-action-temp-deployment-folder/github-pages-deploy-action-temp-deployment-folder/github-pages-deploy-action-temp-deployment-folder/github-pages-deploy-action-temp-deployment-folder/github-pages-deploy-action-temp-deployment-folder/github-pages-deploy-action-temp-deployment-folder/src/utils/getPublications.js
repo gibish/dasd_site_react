@@ -112,7 +112,9 @@ async function getPublication() {
         .catch((error) => {
           console.log("My One error:", error);
           const publicationsOrderedList = document.getElementById("content__alert");
-          publicationsOrderedList.innerHTML = "ERROR...";
+          publicationsOrderedList.innerHTML = "ERROR...Trying again...";
+          console.log("Trying again");
+          getPublication();
         });
     })
     .catch((error) => console.log("My error:", error));
