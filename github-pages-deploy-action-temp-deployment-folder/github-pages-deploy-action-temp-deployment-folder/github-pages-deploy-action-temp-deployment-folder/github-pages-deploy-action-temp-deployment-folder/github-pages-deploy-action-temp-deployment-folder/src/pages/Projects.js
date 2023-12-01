@@ -37,8 +37,8 @@ function Projects() {
             Projects
           </div>
           <ul className="projects_list">
-            {currentProjects.map((project) => {
-              return <ProjectSmall key={project.name} project={project} />;
+            {currentProjects.map((project, index) => {
+              return <ProjectSmall key={project.name} project={project} index={index} />;
             })}
           </ul>
           <br />
