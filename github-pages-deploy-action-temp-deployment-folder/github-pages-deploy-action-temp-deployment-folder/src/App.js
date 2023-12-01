@@ -11,7 +11,9 @@ import Home from "./pages/Home";
 import Department from "./pages/Department";
 import Institute from "./pages/Institute";
 import Projects from "./pages/Projects";
-import Project from "./pages/Project";
+import Project01 from "./pages/Project01";
+import Project02 from "./pages/Project02";
+import Project03 from "./pages/Project03";
 import Staff from "./pages/Staff";
 import Publications from "./pages/Publications";
 import Contacts from "./pages/Contacts";
@@ -34,7 +36,9 @@ function App() {
             <Route path="/department" element={<Department />} />
             <Route path="/institute" element={<Institute />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/project/:id" element={<Project />} />
+            <Route path="/project01" element={<Project01 />} />
+            <Route path="/project02" element={<Project02 />} />
+            <Route path="/project03" element={<Project03 />} />
             <Route path="/staff" element={<Staff />} />
             <Route path="/publications" element={<Publications />} />
             <Route path="/contacts" element={<Contacts />} />

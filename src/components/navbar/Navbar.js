@@ -3,6 +3,7 @@ import { CurrentLanguageContext } from "../../App";
 import { NavLink } from "react-router-dom";
 import BtnDarkMode from "../btnDarkMode/BtnDarkMode";
 import BtnLanguage from "../btnLanguage/BtnLanguage";
+import BtnNavToggle from "../btnNavToggle/BtnNavToggle";
 import Text from "../../lng/lng_nav";
 
 function Navbar() {
@@ -77,9 +78,7 @@ function Navbar() {
             <BtnLanguage />
           </div>
 
-          <button className="nav-toggle" id="nav_toggle" type="button">
-            <span className="nav-toggle__item">Menu</span>
-          </button>
+          <BtnNavToggle />
         </div>
       </div>
     </nav>
