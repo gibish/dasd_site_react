@@ -107,6 +107,8 @@ body {
 /* === NAV === */
 
 .nav {
+  position: sticky;
+  top: 5px;
   margin: 0 0 10px 0;
   background-color: var(--color-bg2);
   box-shadow: 1px 2px 4px var(--color-shadow);
