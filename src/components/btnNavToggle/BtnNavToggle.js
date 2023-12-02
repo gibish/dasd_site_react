@@ -1,23 +1,13 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-
-function BtnNavToggle() {
-  const navToggle = document.getElementById("nav_toggle");
-  const navMenu = document.getElementById("nav_menu");
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    navMenu.classList.remove("nav__menu-active");
-    navToggle.classList.remove("active");
-  }, [pathname, navMenu.classList, navToggle.classList]);
-
+function BtnNavToggle({ stateToggle, handlerToggle }) {
   const toggleMenu = () => {
-    navMenu.classList.toggle("nav__menu-active");
-    navToggle.classList.toggle("active");
+    handlerToggle(!stateToggle);
   };
 
+  const normalClass = "nav-toggle";
+  const activeClass = "nav-toggle active";
+
   return (
-    <button className="nav-toggle" id="nav_toggle" type="button" onClick={toggleMenu}>
+    <button className={stateToggle ? activeClass : normalClass} id="nav_toggle" type="button" onClick={toggleMenu}>
       <span className="nav-toggle__item">Menu</span>
     </button>
   );
