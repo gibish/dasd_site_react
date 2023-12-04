@@ -1,6 +1,6 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CurrentLanguageContext } from "../../App";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import BtnDarkMode from "../btnDarkMode/BtnDarkMode";
 import BtnLanguage from "../btnLanguage/BtnLanguage";
 import BtnNavToggle from "../btnNavToggle/BtnNavToggle";
@@ -11,6 +11,8 @@ function Navbar() {
   const normalLink = "nav__item";
 
   const { currentLanguage } = useContext(CurrentLanguageContext);
+  const [toggleActive, setToggleActive] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     for (const key in Text) {
@@ -21,11 +23,18 @@ function Navbar() {
     }
   }, [currentLanguage]);
 
+  useEffect(() => {
+    setToggleActive(false);
+  }, [pathname]);
+
+  const normalClass = "nav__menu nav__menu-hidden";
+  const activeClass = "nav__menu nav__menu-hidden nav__menu-active";
+
   return (
     <nav className="nav" id="nav">
       <div className="container">
         <div className="nav__inner">
-          <div className="nav__menu nav__menu-hidden" id="nav_menu">
+          <div className={toggleActive ? activeClass : normalClass} id="nav_menu">
             <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)} data-lang="nav-main">
               Main
             </NavLink>
@@ -72,13 +81,11 @@ function Navbar() {
               Contacts
             </NavLink>
           </div>
-
           <div className="nav__menu">
             <BtnDarkMode />
             <BtnLanguage />
           </div>
-
-          <BtnNavToggle />
+          <BtnNavToggle stateToggle={toggleActive} handlerToggle={setToggleActive} />
         </div>
       </div>
     </nav>

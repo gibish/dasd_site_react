@@ -1,4 +1,5 @@
 import { useContext, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { CurrentLanguageContext } from "../App";
 
 import floratest_small from "./../img/Floratest_small.gif";
@@ -63,16 +64,16 @@ function Home() {
           </div>
           <div className="content__projects">
             <div className="content__projects-item">
-              <a href="./project01.html">
+              <NavLink to="/project01">
                 <div className="content__projects-item-img">
                   <img src={floratest_small} alt="Portable device FLORATEST" />
                 </div>
-              </a>
-              <a className="content__projects-link" href="./project01.html">
+              </NavLink>
+              <NavLink to="/project01" className="content__projects-link">
                 <div className="content__projects-item-title" data-lang="content-projects-1-title">
                   Portable device 'FLORATEST'
                 </div>
-              </a>
+              </NavLink>
               <div className="content__projects-item-descr" data-lang="content-projects-1-discr">
                 The portable device 'FLORATEST' is intended for express-diagnostics of the impact of stress factors of
                 natural and anthropogenic origin on the state of plants. The device measures the induction of
@@ -83,16 +84,16 @@ function Home() {
               </div>
             </div>
             <div className="content__projects-item">
-              <a href="./project02.html">
+              <NavLink to="project02">
                 <div className="content__projects-item-img">
                   <img src={network_small} alt="Wireless sensor network for agriculture" />
                 </div>
-              </a>
-              <a className="content__projects-link" href="./project02.html">
+              </NavLink>
+              <NavLink to="project02" className="content__projects-link">
                 <div className="content__projects-item-title" data-lang="content-projects-2-title">
                   Wireless sensor network for agriculture
                 </div>
-              </a>
+              </NavLink>
               <div className="content__projects-item-descr" data-lang="content-projects-2-discr">
                 The wireless sensor network is intended for real-time estimation of the impact of stress factors on the
                 state of plants in large areas for use in agriculture and environmental monitoring. Distributed sensors
@@ -103,16 +104,16 @@ function Home() {
               </div>
             </div>
             <div className="content__projects-item">
-              <a href="./project03.html">
+              <NavLink to="/project03">
                 <div className="content__projects-item-img">
                   <img src={communicator_small} alt="Information medical communicator" />
                 </div>
-              </a>
-              <a className="content__projects-link" href="./project03.html">
+              </NavLink>
+              <NavLink to="/project03" className="content__projects-link">
                 <div className="content__projects-item-title" data-lang="content-projects-3-title">
                   Information medical communicator
                 </div>
-              </a>
+              </NavLink>
               <div className="content__projects-item-descr" data-lang="content-projects-3-discr">
                 The information medical communicator is designed to support the first contact between the doctor and
                 patient by providing detailed information about the injury or disease and appropriate methods of care
