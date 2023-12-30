@@ -1,4 +1,8 @@
-﻿const project03Text = {
+﻿// U+FEFF at the beginning
+
+/*eslint unicode-bom: ["error", "always"]*/
+
+const project03Text = {
   "proj03-content-welcome": {
     en: "Information Communicator for Medicine",
     ua: "Медичний комунікатор для медицини",
@@ -44,6 +48,8 @@
     ua: "Володимир РОМАНОВ",
   },
 };
+
+export default project03Text;
 
 /*
   "":{

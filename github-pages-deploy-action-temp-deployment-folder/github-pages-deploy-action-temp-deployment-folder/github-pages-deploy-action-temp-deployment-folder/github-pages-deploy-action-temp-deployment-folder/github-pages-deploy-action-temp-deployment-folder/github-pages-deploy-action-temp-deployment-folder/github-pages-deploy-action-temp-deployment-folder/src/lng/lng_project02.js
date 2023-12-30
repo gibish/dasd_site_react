@@ -1,4 +1,8 @@
-﻿const project02Text = {
+﻿// U+FEFF at the beginning
+
+/*eslint unicode-bom: ["error", "always"]*/
+
+const project02Text = {
   "proj02-content-welcome": {
     en: "Wireless Sensor Network for Agriculture",
     ua: "Бездротова сенсорна мережа для сільського господарства",
@@ -32,6 +36,8 @@
     ua: "Володимир РОМАНОВ",
   },
 };
+
+export default project02Text;
 
 /*
   "":{

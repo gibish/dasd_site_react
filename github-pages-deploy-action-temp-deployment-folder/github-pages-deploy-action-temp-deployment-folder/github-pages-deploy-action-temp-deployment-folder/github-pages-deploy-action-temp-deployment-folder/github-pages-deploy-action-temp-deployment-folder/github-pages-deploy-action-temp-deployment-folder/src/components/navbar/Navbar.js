@@ -70,27 +70,6 @@ function Navbar() {
             >
               Contacts
             </NavLink>
-            {/* <a className="nav__item active" data-lang="nav-main" href="./index.html">
-              Main
-            </a> */}
-            {/* <a className="nav__item" data-lang="nav-department" href="./department.html">
-              About department
-            </a> */}
-            {/* <a className="nav__item" data-lang="nav-institute" href="./institute.html">
-              About institute
-            </a> */}
-            {/* <a className="nav__item" data-lang="nav-projects" href="./projects.html">
-              Projects
-            </a> */}
-            {/* <a className="nav__item" data-lang="nav-staff" href="./staff.html">
-              Staff
-            </a> */}
-            {/* <a className="nav__item" data-lang="nav-publications" href="./publications.html">
-              Publications
-            </a> */}
-            {/* <a className="nav__item" data-lang="nav-contacts" href="./contacts.html">
-              Contacts
-            </a> */}
           </div>
 
           <div className="nav__menu">
