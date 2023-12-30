@@ -9,7 +9,7 @@ const headerText = {
   },
   "header-institute": {
     en: "V.M.Glushkov's Institute of Cybernetics",
-    ua: "Інститут кібернтики імені В.М.Глушкова",
+    ua: "Інститут кібернeтики імені В.М.Глушкова",
   },
   "header-nasu": {
     en: "National Academy of Sciences of Ukraine",
