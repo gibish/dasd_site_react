@@ -71,7 +71,7 @@ function Project03() {
               </li>
             </ul>
           </div>
-          <div className="content__descr content--justify" data-lang="proj03-descr-5">
+          <div className="content__descr content--justify" data-lang="proj03-descr-6">
             The other aim of information communicator is to support alternative communication with voice and motion
             limited patients. The idea of alternative communication is rather simple. Voice limited patient needs
             communication with surroundings in any way. The process of establishing relations with additional means
